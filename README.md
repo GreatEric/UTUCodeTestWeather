@@ -29,6 +29,12 @@ redis: 3.0.504
 Front End:
 Ionic or Flutter
 
+## UI prototyping
+![avatar](https://www.imageoss.com/images/2021/04/15/UTUCodeTestWeathere15970169a3f5d2f.png)
+
+## Database Design
+![avatar](https://www.imageoss.com/images/2021/04/15/DBTables625c6c7e88ae2e0f.png)
+ 
 ## Project Plan：
 - 1.UI prototyping (0.5 hour)
 - 2.Database table structure design (0.5 hour)
