@@ -7,7 +7,6 @@ import { RedisClient } from "redis";
  * Dependencies Injector Manager
  *
  * @author: Eric
- * @date 15/04/2021 11:56 pm
  */
 export default ({ sequelize, redis, models }: { sequelize: Sequelize; redis: RedisClient; models: { name: string; model: any }[] }) => {
 

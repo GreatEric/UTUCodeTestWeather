@@ -1,0 +1,27 @@
+# Port
+PORT = 8848
+
+# Debug
+LOG_LEVEL = 'debug'
+LOG_TIMEFMT = 'YYYY-MM-DD HH:mm:ss'
+
+# API
+API_PREFIX = '/utu'
+
+# Database
+DB_HOST = '127.0.0.1'
+DB_PORT = '3306'
+DB_USER = 'root'
+DB_PASS = 'lz20180828'
+DB_SCHEMA = 'utucodetestweather'
+DB_DEBUG = false
+DB_POOL_MAX = 100
+DB_POOL_MIN = 10
+DB_POOL_IDLE = 10000
+DB_POOL_ACQUIRE = 30000
+
+# Redis
+REDIS_PORT = 6379
+
+# WebSocket
+WS_PORT = 8849

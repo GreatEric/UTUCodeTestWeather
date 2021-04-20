@@ -5,7 +5,6 @@ import config from '../config';
  * Mysql Connection Pool
  *
  * @author: Eric
- * @date 15/04/2021 10:03 pm
  */
 
 export default async (): Promise<Pool> => {
@@ -21,20 +20,3 @@ export default async (): Promise<Pool> => {
   const pool = await mysql.createPool(dbConfig);
   return pool;
 };
-
-// pool.getConnection((err, conn)=>{
-//   if (err) {
-//
-//   }
-//   if (conn) {
-//     logger.info("conn"+conn)
-//     // var q = conn.query.apply(conn, queryArgs);
-//     // q.on('end', function () {
-//     //   conn.release();
-//     // });
-//     //
-//     // events.forEach(function (args) {
-//     //   q.on.apply(q, args);
-//     // });
-//   }
-// });

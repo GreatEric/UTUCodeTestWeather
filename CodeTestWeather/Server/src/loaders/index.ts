@@ -6,13 +6,13 @@ import workSchedual from './schedule'
 import websocket from './websocket'
 import Logger from './logger';
 import User from "../models/user";
+import Location from "../models/location";
 import './events';
 
 /**
  * Module Loader Manager
  *
  * @author: Eric
- * @date 15/04/2021 8:41 pm
  */
 export default async ({ expressApp }) => {
   const sequelize = await dbSequelize();
@@ -26,25 +26,30 @@ export default async ({ expressApp }) => {
 
   const redis = await redisClient();
 
-  const schedule = await workSchedual();
-  await schedule();
-
-  await websocket({ app: expressApp });
-
   const userModel = {
     name: 'userModel',
     model: User(sequelize)
   };
 
+  const locationModel = {
+    name: 'locationModel',
+    model: Location(sequelize)
+  }
+
   await dependenciesInjector({
     sequelize,
     redis,
     models: [
-      userModel
+      userModel,
+      locationModel
     ],
   });
   Logger.info('✌ Dependency Injector loaded');
 
+  await websocket({ app: expressApp });
+
   await expressLoader({ app: expressApp });
   Logger.info('✌ Express loaded');
+
+  await workSchedual();
 };

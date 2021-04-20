@@ -27,7 +27,7 @@ mysql: 8.0
 redis: 3.0.504
 
 Front End:
-Ionic or Flutter
+Ionic5
 
 ## UI prototyping
 ![avatar](https://www.imageoss.com/images/2021/04/15/UTUCodeTestWeathere15970169a3f5d2f.png)
@@ -39,8 +39,8 @@ Ionic or Flutter
 - 1.UI prototyping (0.5 hour)
 - 2.Database table structure design (0.5 hour)
 - 3.API interface design  (0.5 hour)
-- 4.NodeJS background project scaffolding  (0.5 hour)
-- 5.App project scaffolding  (0.5 hour)
+- 4.NodeJS background project scaffolding  (1.5 hour)
+- 5.App project scaffolding  (1.5 hour)
 - 6.APP function development  (12 hour)
 - 7.Smoke test  (1 hour)
 - 8.Optimization (1 hour)
@@ -49,8 +49,25 @@ Ionic or Flutter
 - [x] UI prototyping
 - [x] Database table structure design
 - [x] API interface design
-- [ ] NodeJS background project scaffolding
-- [ ] App project scaffolding
-- [ ] APP function development
-- [ ] Smoke test
-- [ ] Optimization
+- [x] NodeJS background project scaffolding
+- [x] App project scaffolding
+- [x] APP function development
+- [x] Smoke test
+- [x] Optimization
+
+# Test
+## server: npm start
+
+## app: ionic cordova run android
+
+Note: 
+
+- Please copy env-demo.txt to .env before starting the server
+
+- You need to modify the connection address in the src/config.ts configuration file before running the app
+
+- The database script file uses utucodetestweather-v1.1.sql
+
+
+# Preview
+![avatar](https://www.imageoss.com/images/2021/04/20/UTUCodeTestWeather311e060d51a4b178.gif)

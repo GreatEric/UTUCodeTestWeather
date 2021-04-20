@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import routes from '../api';
 import config from '../config';
+import cors from 'cors';
 
 /**
  * Express config module
@@ -12,8 +13,8 @@ import config from '../config';
  * 4.Configure error handlers
  *
  * @author: Eric
- * @date 15/04/2021 9:01 pm
  */
+
 export default ({ app }: { app: express.Application }) => {
   /**
    * Health Check endpoints
@@ -28,7 +29,16 @@ export default ({ app }: { app: express.Application }) => {
 
   app.enable('trust proxy');
 
-
+  // Enable Cross Origin
+  app.use(cors());
+  app.all('*', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    res.header("X-Powered-By",' 3.2.1')
+    res.header("Content-Type", "application/json;charset=utf-8");
+    next();
+  });
 
   // transforms the raw string of req.body into json
   app.use(bodyParser.json());

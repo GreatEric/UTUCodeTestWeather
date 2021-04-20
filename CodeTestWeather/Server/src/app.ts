@@ -3,19 +3,15 @@ import express from 'express';
 import Logger from './loaders/logger';
 import fs from 'fs';
 import path from "path";
-import cors from 'cors';
+
 
 /**
  * Application entry
  *
  * @author: Eric
- * @date 15/04/2021 8:35 pm
  */
 async function startServer() {
     const app = express();
-
-    // Enable Cross Origin
-    app.use(cors());
 
     await require('./loaders').default({ expressApp: app });
 

@@ -5,7 +5,6 @@ import dotenv from 'dotenv';
  * Initialize application parameters
  *
  * @author: Eric
- * @date 15/04/2021 8:33 pm
  */
 
 //set default ENV

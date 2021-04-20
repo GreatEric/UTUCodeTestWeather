@@ -8,7 +8,7 @@ import { Logger } from 'winston';
 export default class UserSubscriber {
 
   @On(events.user.signUp)
-  public onUserSignUp({ id, device_uuid,curr_city_id }: Partial<IUser>) {
+  public onUserSignUp({ id, device_uuid}: Partial<IUser>) {
     const Logger: Logger = Container.get('logger');
     try {
       Logger.info(`✌ User signup success ${device_uuid}`);

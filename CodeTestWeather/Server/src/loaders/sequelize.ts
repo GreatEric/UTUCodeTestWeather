@@ -5,7 +5,6 @@ import config from '../config';
  * Init Sequelize
  *
  * @author: Eric
- * @date 15/04/2021 10:03 pm
  */
 
 export default async (): Promise<Sequelize> => {

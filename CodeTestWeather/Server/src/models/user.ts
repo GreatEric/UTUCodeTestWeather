@@ -10,8 +10,20 @@ export default (sequelize: Sequelize) => {
     device_uuid: {
       type: DataType.STRING
     },
-    curr_city_id: {
-      type: DataType.INTEGER
+    city: {
+      type: DataType.STRING
+    },
+    region: {
+      type: DataType.STRING
+    },
+    country: {
+      type: DataType.STRING
+    },
+    lat: {
+      type: DataType.STRING
+    },
+    lon: {
+      type: DataType.STRING
     }
   },{
     timestamps: false

@@ -6,7 +6,6 @@ import config from '../config';
  * Config log output format and log output location
  *
  * @author: Eric
- * @date 15/04/2021 8:30 pm
  */
 
 const transports = [];
