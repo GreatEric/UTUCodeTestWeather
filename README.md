@@ -70,4 +70,4 @@ Note:
 
 
 # Preview
-![avatar](https://www.imageoss.com/images/2021/04/20/UTUCodeTestWeather311e060d51a4b178.gif)
+![UTUCodeTestWeather311e060d51a4b178.gif](https://www.imageoss.com/images/2021/04/20/UTUCodeTestWeather311e060d51a4b178.gif)
